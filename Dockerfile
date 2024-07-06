@@ -2,7 +2,7 @@ FROM python
 
 # Environment
 #RUN mkdir /app
-WORKDIR /
+WORKDIR /app
 
 COPY . .
 #COPY /srv/dev-disk-by-uuid-bdf9cd33-6edc-4ad0-b5df-86d76c4e2a1e/docker/src/filer/filer.py /app
