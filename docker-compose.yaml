@@ -1,0 +1,10 @@
+services:
+  filer:
+    image: filer-filer
+   # environment:
+     #- USER_ID=1001
+  #  volumes:
+  #    - "/docker/appdata/handbrake:/config:rw"
+   # devices:
+    #  - "/dev/dri:/dev/dri:rw"
+    restart: unless-stopped
