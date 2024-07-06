@@ -1,6 +1,6 @@
 services:
   filer:
-    image: filer-filer
+    image: filer
    # environment:
      #- USER_ID=1001
   #  volumes:
