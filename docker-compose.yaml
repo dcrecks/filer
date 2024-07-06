@@ -1,10 +1,12 @@
+version: "3"
+
 services:
-  filer:
-    image: filer-filer
-   # environment:
-     #- USER_ID=1001
-  #  volumes:
-  #    - "/docker/appdata/handbrake:/config:rw"
-   # devices:
-    #  - "/dev/dri:/dev/dri:rw"
-    restart: unless-stopped
+  app:
+    build: .
+    environment:
+      WATCH_DIRECTORIES: watch_dir
+      SLEEP_TIMER: 10
+      PYTHONUNBUFFERED: 1
+    command: python filer.py
+    volumes:
+      - /home/acobb/placeholder:/app/watch_dir
